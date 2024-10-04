@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Good Afternoon</h1>
+    <h2>Car Details</h2>
+    <table border="1px" >
+        <tr>
+            <th>Model Name</th>
+            <th>Car Image</th>
+            <th>Mfg year</th>
+            <th>Colour</th>
+            <th>No of doors</th>
+            <th>Engine Type</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        {%for car in car_details%}
+        <tr>
+            <td>{{car.model_name}}</td>
+            <td>{{car.car_img}}</td>
+            <td>{{car.mfg_year}}</td>
+            <td>{{car.color}}</td>
+            <td>{{car.no_of_door}}</td>
+            <td>{{car.engine_type}}</td>
+            <td>{{car.price}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    <br>
+    <br>
+    <br>
+    Click Here To<a href="/" type="button">Go Back</a>
+</body>
+</html>

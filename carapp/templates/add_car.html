@@ -1,0 +1,49 @@
+<!-- app/templates/app/car_form.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Car</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Create New Car</h1>
+        <form method="POST" enctype="multipart/form-data" class="mt-4">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_title" class="form-label">Model Name</label>
+                {{ form.model_name }}
+            </div>
+            <div class="mb-3">
+                <label for="id_content" class="form-label">Year of Manifacturing</label>
+                {{ form.mfg_year }}
+            </div>
+            <div class="mb-3">
+                <label for="id_category" class="form-label">Car Image</label>
+                {{ form.car_img }}
+            </div>
+            <div class="mb-3">
+                <label for="id_catedory" class="form-label">Car colour</label>
+                {{ form.color }}
+            </div>
+            <div class="mb-3">
+                <label for="id_category" class="form-label">Footer Image</label>
+                {{ form.no_of_seets }}
+            </div>
+            <div class="mb-3">
+                <label for="id_catedory" class="form-label">Banner Image</label>
+                {{ form.engine_type }}
+            </div>
+            <div class="mb-3">
+                <label for="id_category" class="form-label">Price</label>
+                {{ form.price }}
+            </div>
+            <button type="submit" class="btn btn-primary">Add Car</button>
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    Click Here To<a href="/" type="button">Go Back</a>
+</body>
+</html>
